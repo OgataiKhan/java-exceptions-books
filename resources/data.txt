@@ -1,0 +1,2 @@
+Book{title='The Lord of the Rings', pages=1178, author='John Ronald Reuel Tolkien', publisher='HarperCollins'}
+Book{title='Eragon', pages=544, author='Christopher Paolini', publisher='Paolini International LLC'}
