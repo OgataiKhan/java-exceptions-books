@@ -21,17 +21,23 @@ public class Library {
             String title, author, publisher;
             int pages;
 
-            System.out.print("Book title: ");
-            title = scanner.nextLine();
-            System.out.print("Page number: ");
-            pages = Integer.parseInt(scanner.nextLine());
-            System.out.print("Author: ");
-            author = scanner.nextLine();
-            System.out.print("Publisher: ");
-            publisher = scanner.nextLine();
+            try {
+                System.out.print("Book title: ");
+                title = scanner.nextLine();
+                System.out.print("Page number: ");
+                pages = Integer.parseInt(scanner.nextLine());
+                System.out.print("Author: ");
+                author = scanner.nextLine();
+                System.out.print("Publisher: ");
+                publisher = scanner.nextLine();
 
-            bookArray[i] = new Book(title, pages, author, publisher);
-            i++;
+                bookArray[i] = new Book(title, pages, author, publisher);
+                i++;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Page number must be an integer.");
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+            }
         }
 
         // Print books
